@@ -85,11 +85,14 @@ public class MainActivity extends AppCompatActivity {
             lunYear = matcher.group(1);
             String lunMonth = matcher.group(2);
             String lunDay = matcher.group(3);
-            String thang="";
+            String thang="", ngay ="";
              if(lunMonth.length()==1){
                  thang = "0"+ lunMonth;
-             }else thang = lunDay;
-            return "Lịch âm là: " + lunDay +"/" + thang +  "/"  + lunYear;
+             }else thang = lunMonth;
+             if(lunDay.length()==1){
+                 ngay ="0"+lunDay;
+             }else ngay = lunDay;
+            return "Lịch âm là: " + ngay +"/" + thang +  "/"  + lunYear;
         }
     return "Failed";
 
